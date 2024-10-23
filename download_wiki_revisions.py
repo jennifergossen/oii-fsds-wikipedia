@@ -11,8 +11,8 @@ def download_page_w_revisions(page_title: str) -> str:
     """Downloads complete revision history of a page using Special:Export with progress bar."""
     url = f"https://en.wikipedia.org/wiki/Special:Export/{page_title}"
     params = {
-        "history": "",  # Empty parameter to get full history
-        "action": "submit"
+        "history": "1000",  # Empty parameter to get full history # now 1000
+        "action": "submit",
     }
     
     # Make initial request to get content length
